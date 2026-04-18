@@ -30,7 +30,7 @@ Editar `config/database.php` con tus credenciales
 4. **Configurar JWT**
 Editar `config/jwt.php` con tu clave secreta
 
-5. **Ejecutar el servidor**
+5. **Ejecutar el servidor o probar con postman**
 ```bash
 php -S localhost:8000 -t public
 ```
@@ -62,7 +62,8 @@ Content-Type: application/json
 {
   "name": "John Doe",
   "email": "john@example.com",
-  "password": "password123"
+  "password": "password123",
+  "role_id": 1
 }
 ```
 
@@ -94,15 +95,20 @@ Content-Type: application/json
 **Respuesta (200)**
 ```json
 {
-  "message": "Login exitoso",
-  "token": "eyJ0eXAiOiJKV1QiLCJhbGc...",
-  "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGc...",
-  "user": {
-    "id": 1,
-    "name": "John Doe",
-    "email": "john@example.com",
-    "role_id": 2
-  }
+    "message": "Login exitoso",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NzY1MjYxODMsImV4cCI6MTc3NjUyOTc4MywidXNlcklkIjo0LCJlbWFpbCI6ImRhcmlvajk5QGdtYWlsLmNvbSIsInJvbGVfaWQiOjF9.hin6soXKEGG1WeA_-lCJ6TxIiinUcKnW8V-903-zWJ4",
+    "user": {
+        "id": 4,
+        "name": "Favierd",
+        "email": "darioj99@gmail.com",
+        "role_id": 1,
+        "permissions": [
+            {
+                "id": 2,
+                "name": "Eliminar usuarios"
+            }
+        ]
+    }
 }
 ```
 

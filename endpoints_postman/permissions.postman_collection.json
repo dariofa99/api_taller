@@ -1,0 +1,156 @@
+{
+  "info": {
+    "_postman_id": "137416b6-2c72-4f5c-ae75-8ab4a6c8a414",
+    "name": "permissions",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "7381501",
+    "_collection_link": "https://go.postman.co/collection/7381501-137416b6-2c72-4f5c-ae75-8ab4a6c8a414?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "agregar",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Eliminar usuarios\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "taller.api.local/permisos/store",
+          "host": [
+            "taller",
+            "api",
+            "local"
+          ],
+          "path": [
+            "permisos",
+            "store"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":1,\r\n    \"name\":\"Administradores\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "taller.api.local/permisos/update",
+          "host": [
+            "taller",
+            "api",
+            "local"
+          ],
+          "path": [
+            "permisos",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "findById",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "taller.api.local/permisos/find",
+          "host": [
+            "taller",
+            "api",
+            "local"
+          ],
+          "path": [
+            "permisos",
+            "find"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":1   \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "taller.api.local/permisos/delete",
+          "host": [
+            "taller",
+            "api",
+            "local"
+          ],
+          "path": [
+            "permisos",
+            "delete"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listar",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "taller.api.local/permisos",
+          "host": [
+            "taller",
+            "api",
+            "local"
+          ],
+          "path": [
+            "permisos"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

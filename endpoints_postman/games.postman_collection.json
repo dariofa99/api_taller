@@ -1,0 +1,189 @@
+{
+  "info": {
+    "_postman_id": "b51d310f-f5cb-48ce-97c6-7e9c2828c467",
+    "name": "games",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "7381501",
+    "_collection_link": "https://go.postman.co/collection/7381501-b51d310f-f5cb-48ce-97c6-7e9c2828c467?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "create",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Resident Evil 4\",\r\n  \"genre\": \"Terror\",\r\n  \"platform\": \"PC\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "taller.api.local/games/store",
+          "host": [
+            "taller",
+            "api",
+            "local"
+          ],
+          "path": [
+            "games",
+            "store"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 5,    \r\n  \"name\": \"Resident Evil x4\",\r\n  \"genre\": \"Terror\",\r\n  \"platform\": \"PC\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "taller.api.local/games/update",
+          "host": [
+            "taller",
+            "api",
+            "local"
+          ],
+          "path": [
+            "games",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listar",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "taller.api.local/games",
+          "host": [
+            "taller",
+            "api",
+            "local"
+          ],
+          "path": [
+            "games"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "findById",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": \"9\"\r\n  \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "taller.api.local/games/find",
+          "host": [
+            "taller",
+            "api",
+            "local"
+          ],
+          "path": [
+            "games",
+            "find"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": \"5\"  \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "taller.api.local/games/delete",
+          "host": [
+            "taller",
+            "api",
+            "local"
+          ],
+          "path": [
+            "games",
+            "delete"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "info": {
+    "_postman_id": "096a4e92-b052-4df2-94bb-914aaf423d88",
+    "name": "tournament_player",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "7381501",
+    "_collection_link": "https://go.postman.co/collection/7381501-096a4e92-b052-4df2-94bb-914aaf423d88?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "listar",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{localhost}}/tournament/players",
+          "host": [
+            "{{localhost}}"
+          ],
+          "path": [
+            "tournament",
+            "players"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "agregar",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"tournament_id\": 5,\r\n    \"player_id\": 4\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{localhost}}/tournament/players/store",
+          "host": [
+            "{{localhost}}"
+          ],
+          "path": [
+            "tournament",
+            "players",
+            "store"
+          ]
+        },
+        "description": "Generated from cURL: curl --request POST '{{localhost}}/tournament/players/store' --header 'Content-Type: application/json' --data-raw '{\"tournament_id\":1,\"player_id\":1}'"
+      },
+      "response": []
+    },
+    {
+      "name": "update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"id\":1,\"tournament_id\":1,\"player_id\":1}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{localhost}}/tournament/players/update",
+          "host": [
+            "{{localhost}}"
+          ],
+          "path": [
+            "tournament",
+            "players",
+            "update"
+          ]
+        },
+        "description": "Generated from cURL: curl --request PUT '{{localhost}}/tournament/players/update' --header 'Content-Type: application/json' --data-raw '{\"id\":1,\"tournament_id\":1,\"player_id\":1}'"
+      },
+      "response": []
+    },
+    {
+      "name": "findById",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"id\":5}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{localhost}}/tournament/players/find",
+          "host": [
+            "{{localhost}}"
+          ],
+          "path": [
+            "tournament",
+            "players",
+            "find"
+          ]
+        },
+        "description": "Generated from cURL: curl --request GET '{{localhost}}/tournament/players/find' --header 'Content-Type: application/json' --data-raw '{\"id\":1}'"
+      },
+      "response": []
+    },
+    {
+      "name": "delete",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"id\":3}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{localhost}}/tournament/players/delete",
+          "host": [
+            "{{localhost}}"
+          ],
+          "path": [
+            "tournament",
+            "players",
+            "delete"
+          ]
+        },
+        "description": "Generated from cURL: curl --request DELETE '{{localhost}}/tournament/players/delete' --header 'Content-Type: application/json' --data-raw '{\"id\":1}'"
+      },
+      "response": []
+    }
+  ]
+}
